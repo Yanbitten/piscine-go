@@ -1,4 +1,2 @@
 #!/bin/bash
-find -name 'a*'
-find -name '*z'
-find -name 'z**a'
+find -name 'a*' -o find -name '*z' -o find -name 'z**a'
