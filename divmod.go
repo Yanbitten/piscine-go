@@ -1,7 +1,7 @@
-package piscine
+package main
 
 func DivMod(a int, b int, div *int, mod *int) {
-	*div = int(a/b)
+	*div = int a/b
 	*mod = a % b
 
 }
