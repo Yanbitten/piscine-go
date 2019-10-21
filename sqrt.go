@@ -1,15 +1,13 @@
 package piscine
 
-func Fibonacci(index int) int {
-	if index < 0 {
-		return -1
-	}
-	if index == 0 {
-		return 0
-	} else if index == 1 {
-		return 1
-	} else {
-		return Fibonacci(index-1) + Fibonacci(index-2)
-	}
+func Sqrt(nb int) int {
 
+	for i := 1; i <= nb; i++ {
+		if i*i == nb {
+			return i
+		} else {
+			continue
+		}
+	}
+	return 0
 }
