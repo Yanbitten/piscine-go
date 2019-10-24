@@ -1,13 +1,15 @@
 package main
 
 import (
+	"fmt"
+
 	piscine ".."
-	"github.com/01-edu/z01"
 )
 
 func main() {
-	z01.PrintRune(piscine.FirstRune("Hello!"))
-	z01.PrintRune(piscine.FirstRune("Salut!"))
-	z01.PrintRune(piscine.FirstRune("Ola!"))
-	z01.PrintRune('\n')
+	a := 0
+	b := 1
+	piscine.Swap(&a, &b)
+	fmt.Println(a)
+	fmt.Println(b)
 }
