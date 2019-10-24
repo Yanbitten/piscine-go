@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/01-edu/z01"
 	"os"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
@@ -17,3 +18,5 @@ func PrintRuneArray(runes []rune) {
 		_ = z01.PrintRune(ch)
 	}
 }
+
+//ku
