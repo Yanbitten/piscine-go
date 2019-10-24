@@ -7,15 +7,24 @@ import (
 )
 
 func main() {
-	for _, s := range os.Args[1:] {
-		PrintRuneArray([]rune(s))
-		z01.PrintRune('\n')
+	len := 0
+	args := os.Args
+	for range args {
+		len++
 	}
-}
-
-func PrintRuneArray(runes []rune) {
-	for _, ch := range runes {
-		_ = z01.PrintRune(ch)
+	revargs := args
+	for i := 1; i < len; i++ {
+		revargs[i-1] = args[i]
+	}
+	for i, j := 0, len-1; i < j; i, j = i+1, j-1 {
+		args[i], args[j] = args[j], args[i]
+	}
+	for i := 1; i < len; i++ {
+		arg := revargs[i]
+		for _, letter := range arg {
+			z01.PrintRune(letter)
+		}
+		z01.PrintRune('\n')
 	}
 }
 
